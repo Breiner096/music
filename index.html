@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de PDF con Banner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="imagen_2025-05-19_203104325.jpg" alt="Banner">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#pdf-section">PDF</a></li>
+                <li><a href="#video-section">Video</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="pdf-section" class="section">
+            <h2>Visualizador de PDF</h2>
+            <div class="pdf-container">
+                <div id="pdf-viewer"></div>
+                <div class="pdf-controls">
+                    <button id="prev-page">Anterior</button>
+                    <span id="page-num"></span> / <span id="page-count"></span>
+                    <button id="next-page">Siguiente</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="video-section" class="section">
+            <h2>Video de YouTube</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/CMimAb43z60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Visualizador de PDF con Banner</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

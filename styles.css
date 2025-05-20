@@ -1,0 +1,188 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Header and navigation */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.banner {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.banner:hover img {
+    transform: scale(1.05);
+}
+
+nav {
+    background-color: #2c3e50;
+    padding: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section {
+    margin-bottom: 3rem;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+}
+
+/* PDF viewer */
+.pdf-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#pdf-viewer {
+    width: 100%;
+    height: 600px;
+    border: 1px solid #ddd;
+    overflow: auto;
+    background-color: #f5f5f5;
+}
+
+.pdf-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.pdf-controls button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pdf-controls button:hover {
+    background-color: #2980b9;
+}
+
+.pdf-upload {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.pdf-upload input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Video section */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #2c3e50;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+    
+    .banner {
+        height: 150px;
+    }
+    
+    #pdf-viewer {
+        height: 400px;
+    }
+    
+    .section {
+        padding: 1.5rem;
+    }
+}
